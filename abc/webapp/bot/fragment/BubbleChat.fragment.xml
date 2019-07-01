@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ResponsivePopover  showArrow="true" showHeader="false" class="sapUiPopupWithPadding bublePopOver" placement="Top" contentWidth="15rem"
+		offsetY="-10px" >
+		<content>
+			<Text   text="{oModelBotBubble>/bubbleGreet/bubbleMsg}"></Text>
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

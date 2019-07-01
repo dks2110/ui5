@@ -1,0 +1,16 @@
+{
+	"delayConfig" : [{
+		"delay":5000,
+		"noInputDelay":60000,
+		"hEmailId" : "pe_channel_helpline@sap.com",
+		"hSubjectValue" : "Help request from Buddy",
+		"Body1" : "Dear User,",
+		"Body2" : "Help us understand your need by providing the following information:",
+		"Body3" : "S-User:",
+		"Body4" : "Company Name:",
+		"Body5" : "Partner Name or ID:",
+		"Body6" : "Headquarters City, Country:",
+		"Body7" : "How can we help you? (Please describe, in detail, the process you are trying to perform, including any additional information such as the link, screenshots and error messages.) "
+		
+	}]
+}

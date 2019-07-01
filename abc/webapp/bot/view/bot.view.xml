@@ -1,0 +1,16 @@
+<mvc:View controllerName="chat.bot.bot.controller.bot"  xmlns:mvc="sap.ui.core.mvc"  xmlns="sap.m">
+	<!--	<OverflowToolbar>
+			<ToolbarSpacer/>
+			<Button visible="{worklistView>/bShowCreateDealButton}" text="{i18n>createDealReg}" press="onDealCreatePress">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow"/>
+			</layoutData>
+				</Button>-->
+			<Image  src="bot/images/BUDDY_v1.png" tooltip="Buddy" width="22px"   press="onHelpButtonPressed" visible="{oModelAuthcheck>/authModelData/Authorized}" id="buttonChatF" >
+			<!--	<layoutData>
+			<OverflowToolbarLayoutData priority="NeverOverflow"/>
+		</layoutData>-->
+			</Image>
+<!--	<Button text="Buddy" press="onHelpButtonPressed" id="buttonChatF" icon="sap-icon://customer-and-supplier" visible="true"></Button>-->
+<!--</OverflowToolbar>-->
+</mvc:View>

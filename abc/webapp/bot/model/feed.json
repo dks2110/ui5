@@ -1,0 +1,11 @@
+{
+  "EntryCollection" : [{
+    "Author" : "Partner Digital Support Assistant",
+    "AuthorPicUrl" : "./images/pdsicon1.png",
+    "Type" : "Information",
+    "Date" : "",
+    "Text" : "Greetings. I am your digital support assistant. How may I assist you today?",
+    "MessagePic":"",
+    "ButtonsList":[]
+  }]
+}

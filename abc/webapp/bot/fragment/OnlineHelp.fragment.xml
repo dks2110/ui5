@@ -1,0 +1,188 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:wt="chat.bot.bot.util" xmlns:po="chat.bot.bot.util"
+	xmlns:mvc="sap.ui.core.mvc">
+	<po:ResponsivePopover id="onlineHelp" showCloseButton="true" afterClose="onPressCancelBot" class="botMainDialog clPopover"
+		contentHeight="26.4rem" contentWidth="16.5rem" placement="VerticalPreferredTop" offsetX="-195px" offsetY="-10px" horizontalScrolling="false"
+		verticalScrolling="false" modal="false" showArrow="false" showHeader="true" initialFocus="searchField" resizable="false" visible="false">
+		<po:customHeader >
+			<Bar id="barIdBot">
+				<contentLeft >
+					<core:Icon src="sap-icon://menu2" press="onBotMenu" class="headerIcon sapUiSmallMarginBegin"></core:Icon>
+					<!--<core:Icon src="sap-icon://sys-help" press="" class="headerIcon sapUiTinyMarginBegin"></core:Icon>-->
+					<core:Icon src="sap-icon://message-information"  class="headerIcon sapUiTinyMarginBegin"></core:Icon>
+				</contentLeft>
+				<contentMiddle></contentMiddle>
+				<contentRight >
+					<!--	<core:Icon src="sap-icon://refresh" press="onPressCancelBot" class="headerIcon sapUiSmallMarginBegin"></core:Icon>-->
+					<core:Icon src="sap-icon://action-settings"  class="headerIcon"></core:Icon>
+					<core:Icon src="sap-icon://decline" press="onPressCancelBot" class="sapUiSmallMarginEnd headerIcon"></core:Icon>
+					<!--	<Button icon="sap-icon://decline" press="onClearChat" class="sapUiTinyMarginEnd"></Button>-->
+				</contentRight>
+			</Bar>
+		</po:customHeader>
+		<po:content>
+			<FlexBox class="incont sapUiSmallMarginBottom" height="92%" width="97.4%" direction="Column" renderType="Div" id="mainCont">
+				<items>
+					<VBox width="100%" id="chatC">
+						<VBox class=" chatCenter">
+							<Image id="botMainLogo" src="bot/images/BUDDY_v1.png" width="100%" class="rotatexyz sapUiLargeMarginTop"/></VBox>
+						<Text text="Hello, I'm Sophie. How can I help you today?" wrapping="true" visible="false" class="sapUiSmallMarginBeginEnd InitTextPhone"/>
+					</VBox>
+					<ScrollContainer id="scrollContainer" vertical="true" horizontal="false" height="89%" class="scrollC sapUiSmallMarginTop">
+						<List showSeparators="None" items="{oModelBot>/EntryCollection}" showNoData="false"
+							noDataText="Welcome to Partner ChatBot. How can i help you ?" id="chatlist" visible="false" growing="true" growingDirection="Downwards"
+							growingThreshold="100000">
+							<CustomListItem class="chatc">
+								<wt:MessageStrip id="messageStripId" enableFormattedText="true" text="{oModelBot>Text}" type="{oModelBot>Type}" showIcon="true"
+									showCloseButton="false" customIcon="{oModelBot>AuthorPicUrl}" class="msgStripRadius msgLinkFS">
+									<Link text="{oModelBot>LinkText}" target="_blank" href="{oModelBot>LinkUrl}" visible="false"/>
+								</wt:MessageStrip>
+								<Image id="picIdMessage" src="{oModelBot>MessagePic}" width="90%" visible="false" press="onClickPic" class="msgStripRadius"></Image>
+								<VBox  width="90%">
+									<List items="{oModelBot>ButtonsList}" id="butList" showNoData="false" visible="false" width="90%"
+										class="sapUiTinyMarginBegin sapUiTinyMarginBottom" busy="false">
+										<CustomListItem>
+											<VBox class="sapUiSmallMarginBegin" width="90%">
+												<Button type="Emphasized" text="{oModelBot>title}"  tooltip="{oModelBot>title}" press="onPressListCB" width="100%"></Button>
+												<Text text="{oModelBot>value}" visible="false"></Text>
+											</VBox>
+										</CustomListItem>
+									</List>
+								</VBox>
+								<VBox width="90%">
+									<List items="{oModelBot>ButtonsList}" id="botRateL" visible="false" width="100%" class="sapUiTinyMarginBottom" showNoData="false">
+										<CustomListItem class="hListRate">
+											<VBox >
+												<Button type="Emphasized" text="{oModelBot>title}" tooltip="{oModelBot>title}" press="onPressRate" class="botRateBut"></Button>
+												<Text text="{oModelBot>value}" visible="false"></Text>
+											</VBox>
+										</CustomListItem>
+									</List>
+								</VBox>
+								<VBox width="90%">
+									<Table id="botTableSM" items="{oModelBot>ButtonsList}" width="100%" class="sapUiTinyMarginBottom botTableSM" showNoData="false" visible="false">
+										<!--<headerToolbar>
+											<OverflowToolbar>
+												<Title text="Products" level="H2"/>
+												<ToolbarSpacer/>
+												<CheckBox text="Fixed Layout" selected="true" select="onCheckBoxSelect"/>
+												<Button text="Open Dialog" press="onOpenPressed"/>
+											</OverflowToolbar>
+										</headerToolbar>-->
+										<columns>
+											<Column >
+												<Text text="Manager Name" wrapping="true"/>
+											</Column>
+											<Column >
+												<Text text="Partner function"/>
+											</Column>
+											<Column >
+												<Text text="S user"/>
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem vAlign="Middle" type="Navigation" class="hListRate">
+												<cells>
+													<Text text="{oModelBot>ConpName}"/>
+													<Text text="{oModelBot>PartnerFunction}"/>
+													<Text text="{oModelBot>SUser}"/>
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+								</VBox>
+							</CustomListItem>
+						</List>
+						<VBox class="busyIndicator msgStripRadius " width="90%" id="busyIndicatorId" visible="false">
+							<HBox justifyContent="Start" alignItems="Center" class="indictopmar">
+								<Image src="bot/images/BUDDY_v1.png" width="20px" class="imagemar rotatexyz"></Image>
+								<BusyIndicator size="1em" class="sapUiTinyMarginBegin"/>
+								<!--<BusyIndicator size=".7em"/>
+										<BusyIndicator size=".85em"/>
+										<BusyIndicator size="1em"/>
+									<BusyIndicator size="1em"/>-->
+							</HBox>
+						</VBox>
+					</ScrollContainer>
+					<VBox class="footerFX" height="9.2%" id="footerCon" >
+						<HBox  >
+						<!--	<Button type="Transparent" icon="sap-icon://microphone" class="sapUiTinyMarginBegin" press="onVoiceRec" visible="false"/>-->
+							<!--<SearchField id="searchField" class="sapUiTinyMarginEnd sapUiTinyMarginBegin" search="onPost" liveChange="onLiveChange"
+								placeholder="type here" showRefreshButton="false" width="100%" showSearchButton="false"></SearchField>-->
+							<TextArea id="searchField"  class="sapUiSmallMarginBeginEnd searchField" valueLiveUpdate="true" placeholder="Type here (English)"
+							width="14.4rem" liveChange="onChangeText"   growing="true"  rows="1" growingMaxLines="4"/>
+						</HBox>
+					</VBox>
+				</items>
+			</FlexBox>
+			<!--	<ScrollContainer class="incont sapUiSmallMarginTop sapUiSmallMarginBottom " height="73%" width="97%" horizontal="false" vertical="true" focusable="true">
+					<VBox alignContent="Center" alignItems="Center" width="100%" id="chatC">
+						<Image src="./images/bot/idle_small.gif" width="100%"/>
+						<Text text="Greetings. I am your digital support assistant. How may I assist you today ?" wrapping="true"/>
+					</VBox>
+					<List items="{oModelBot>/EntryCollection}" showNoData="false" noDataText="Welcome to Partner ChatBot. How can i help you ?" id="chatlist"
+						visible="false">
+						<CustomListItem >
+							<wt:MessageStrip enableFormattedText="true" text="{oModelBot>Text}" type="{oModelBot>Type}" showIcon="true" showCloseButton="false"
+								customIcon="{oModelBot>AuthorPicUrl}">
+								<Link text="{oModelBot>LinkText}" target="_blank" href="{oModelBot>LinkUrl}"/>
+								<wt:hbox id="idWT">
+								
+								</wt:hbox>
+							</wt:MessageStrip>
+						</CustomListItem>
+					</List>
+					
+					</ScrollContainer>
+						<VBox class="footerFX" height="10%">
+					<HBox>
+					<Button icon="sap-icon://menu2" class="sapUiTinyMarginBegin"></Button>-->
+			<!--<Input class="sapUiTinyMarginEnd" type="Text" placeholder="Enter Text here" showSuggestion="true" suggest="handleSuggest" width="auto"/>-->
+			<!--	<SearchField id="searchField" class="sapUiTinyMarginEnd" search="onPost" liveChange="onLiveChange" placeholder="How can I help you?" showRefreshButton="false"></SearchField>
+					</HBox>
+				</VBox>-->
+			<!--	<HBox class="incont sapUiSmallMarginTop sapUiSmallMarginBottom " width="100%" height="100%" fitContainer="true">
+						<VBox class="footerFX" height="48px">
+					<HBox>
+						<Button icon="sap-icon://menu2" class="sapUiTinyMarginBegin"></Button>
+					<Input class="sapUiTinyMarginEnd" type="Text" placeholder="Enter Text here" showSuggestion="true" suggest="handleSuggest" width="auto"/>
+					</HBox>
+					
+				</VBox>
+					</HBox>-->
+			<!--	<VBox alignContent="Center" alignItems="Center" width="100%" id="chatC">
+						<Image src="./images/bot/idle_small.gif" width="100%"/>
+						<Text text="Greetings. I am your digital support assistant. How may I assist you today ?" wrapping="true"/>
+					</VBox>
+					<List items="{oModelBot>/EntryCollection}" showNoData="false" noDataText="Welcome to Partner ChatBot. How can i help you ?" id="chatlist"
+						visible="false">
+						<CustomListItem >
+							<wt:MessageStrip enableFormattedText="true" text="{oModelBot>Text}" type="{oModelBot>Type}" showIcon="true" showCloseButton="false"
+								customIcon="{oModelBot>AuthorPicUrl}">
+								<Link text="{oModelBot>LinkText}" target="_blank" href="{oModelBot>LinkUrl}"/>
+								<wt:hbox id="idWT">
+								
+								</wt:hbox>
+							</wt:MessageStrip>
+						</CustomListItem>
+					</List>
+					<VBox id="SeeAllOp" visible="false">
+						<core:Fragment fragmentName="chat.bot.fragment.bot.SeeAllOpp" type="XML"/>
+					</VBox>-->
+		</po:content>
+		<!--	<footer>
+					<Toolbar>
+						<SearchField id="searchField" search="onPost" liveChange="onLiveChange" placeholder="How can I help you?" showRefreshButton="true"></SearchField>
+						<Button press="onClearChat" icon="sap-icon://refresh" tooltip="Refresh" class="refreshBut">
+							<layoutData>
+								<FlexItemData growFactor="1"/>
+							</layoutData>
+						</Button>
+					</Toolbar>
+				</footer>-->
+	</po:ResponsivePopover>
+	<!--	<Button text="Sophie" press="onOverFlowHelpButtonPressed" id="buttonChatMin" icon="sap-icon://less" visible="false">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</Button>-->
+</core:FragmentDefinition>

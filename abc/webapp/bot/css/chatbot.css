@@ -1,0 +1,313 @@
+
+
+.botMainDialog .sapMMsgStripIcon ~ .sapMMsgStripMessage {
+    margin-left: 0;
+    margin-bottom: 0px;
+    max-height: none;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.botMainDialog .sapMMsgStripInformation .sapMMsgStripIcon {
+	text-align: start !important;
+    margin-left: 3px !important;
+}
+
+
+.botMainDialog .sapMMsgStripIcon img {
+    width: 18px;
+}
+
+
+.botMainDialog .sapMMsgStripSuccess .sapMMsgStripIcon {
+    display: none;
+    width: 2rem !important;
+   
+    /*right: 1px !important;*/
+    /*left: inherit !important;*/
+}
+
+.botMainDialog .sapMLIBContent .sapMMsgStrip.sapMMsgStripSuccess {
+    background-color:  #2f3c48;
+    border-color:  #2f3c48;
+    padding: 3px;
+     color: white;
+     min-width: 60%;
+    
+}
+
+
+.botMainDialog .sapMLIBContent .sapMMsgStrip.sapMMsgStripInformation {
+    background-color: white;
+    border-color: white;
+    padding-right: 3px;
+    min-width: 90%;
+   
+   
+   /* border-top-left-radius: 40px !important;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 40px !important;
+    border-bottom-left-radius: 0px !important;*/
+}
+
+
+.botMainDialog .sapMLIBContent .sapMMsgStrip {
+   /* border-radius: 10px !important;*/
+    margin-top: 0;
+    /*margin: 5px 0 !important;*/
+   /* min-height: 30px;*/
+    display: table;
+   /* padding: 3px 35px;*/
+    max-width: 90%;
+   /* min-width: 140px;*/
+    text-align: start;
+        padding-top: 3px;
+    padding-right: 35px;
+    padding-bottom: 3px;
+    padding-left: 26px;
+}
+.msgStripRadius {
+	 border-radius: 10px !important;
+	 margin: 5px  !important;
+}
+
+.msgStripRadiusBottom {
+	
+	 margin-bottom: 0px !important;
+	 margin-top: 5px !important;
+	     margin-left: 5px !important;
+	 border-top-right-radius: 10px !important;
+     border-top-left-radius: 10px !important;
+}
+.botMainDialog .sapMMsgStripSuccess {
+    float: right;
+    background-color: white;
+    border-color: white;
+}
+.botMainDialog .sapMMsgStripSuccess .sapMMsgStripMessage {
+    display: table-cell;
+    
+}
+.botMainImage {
+    width: auto;
+}
+
+
+
+/*
+bot layout
+*/
+
+.clPopover .sapMPopoverCont {
+    background-color: #2f3c48 !important;
+}
+
+.clPopover {
+    border-radius: 2.3rem !important;
+}
+
+.incont {
+    background-color: #bbd0e6 !important;
+    border-bottom-left-radius: 1.3rem !important;
+    border-bottom-right-radius: 1.3rem !important;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+    /*border-radius: 1rem !important;*/
+    margin-right:0.2rem !important;
+	 margin-left: 0.2rem!important;
+}
+.incontPhone {
+	background-color: #bbd0e6 !important;
+}
+.scrollC{
+  border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+}
+.footerFX {
+   /* position: sticky !important;*/
+    position: absolute !important;
+    width: 97.4% !important;
+    bottom: 4% !important;
+    /*top: 500px !important;*/
+    background-color: white !important;
+    border-bottom-left-radius: 1.3rem !important;
+    border-bottom-right-radius: 1.3rem !important;
+}
+
+.footerFXPhone {
+   /* position: sticky !important;*/
+    position: absolute !important;
+    width: 100% !important;
+    bottom: 3% !important;
+    /*top: 500px !important;*/
+    background-color: white !important;
+    border-bottom-left-radius: 1.3rem !important;
+    border-bottom-right-radius: 1.3rem !important;
+}
+.chatc{
+	 background-color: #bbd0e6 !important;
+}
+.searchField .sapMTextAreaInner {
+	    border-width:0px !important;
+}
+.sapMBtnInner {
+	     border: 0px !important;
+}  
+
+.sapMSFF {         border: 0px !important;}
+
+.chatCenter{
+	margin: auto;
+  width: 50%;
+}
+
+.InitText{
+	  position: absolute;
+  top: 120px;
+}
+
+.InitTextPhone{
+	  position: absolute;
+  top: 300px;
+}
+
+.rotatexyz {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.botMainDialog .sapMBarContainer {
+  
+    background-color: #2f3c48 !important;
+    
+   
+}
+.headerIcon {
+  
+    color: white !important;
+   
+    
+   
+}
+.botMainDialog .sapMBar {
+    height: 1.6rem !important;
+     background-color:#2f3c48 !important;
+    box-shadow: inset 0 0rem #2f3c48 !important;
+     
+}
+.barIdBot {
+	    background-color: #bbd0e6 !important;
+    /*height: 2rem !important;*/
+}
+.bublePopOver {
+	border-radius: 1rem !important;
+	    /*//border-style: solid !important;*/
+	   /* box-shadow: 0 1.625rem 1.875rem 0 rgba(0,0,0,0.15), 0 0 0 2px rgba(0,0,0,0.15) !important;*/
+	    box-shadow: 0 1.625rem 1.875rem 0 rgba(0,0,0,0.15), 0 0 0 2px gray !important;
+	    
+	  /*position: relative;
+	padding:12px 12px;
+	margin:12px auto 100px;
+	text-align:center;
+	color:#fff; 
+	background:#bbb; 
+    width:17rem;
+	border-radius: 15px;*/
+	    
+}
+/*.bublePopOver ~.sapMPopoverArrDown:after {
+    box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 0 0 2px black;
+}*/
+
+.bublePopOver .sapMPopoverArrDown:after {
+    margin: -0.375rem 0 0 0.125rem;
+    box-shadow: 0 0 0 rgba(0,0,0,0), 0 0 0 2px gray;
+}
+
+.bublePopOver.sapMPopover .sapMPopoverCont {
+	    border-radius: inherit !important;
+	    
+}
+
+.bublePopOver1:before {
+	content:"";
+	position:absolute;
+	z-index:-1;
+	bottom:-20px;
+	right:10%;
+	height:30px;
+	border-left:30px solid #bbb;
+	background:#bbb;
+	/* css3 */
+	-webkit-border-bottom-left-radius:80px 50px;
+	-moz-border-radius-bottomleft:80px 50px;
+	border-bottom-left-radius:80px 50px;
+	/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+	-webkit-transform:translate(0, 2px);
+	-moz-transform:translate(0, 2px);
+	-ms-transform:translate(0, 2px);
+	-o-transform:translate(0, 2px);
+	transform:translate(0, -9px);
+}
+
+/* creates part of the curved pointy bit */
+.bublePopOver1:after {
+	content:"";
+	position:absolute;
+	z-index:-1;
+	bottom:-20px;
+	right:8%;
+	width:30px;
+	height:25px;
+	background:#fff;
+	/* css3 */
+	-webkit-border-bottom-left-radius:50px 40px; 
+	-moz-border-radius-bottomleft:50px 40px; 
+	border-bottom-left-radius:50px 40px; 
+	/* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+	-webkit-transform:translate(2px, -10px);
+	-moz-transform:translate(2px, -10px);
+	-ms-transform:translate(2px, -10px);
+	-o-transform:translate(2px, -10px);
+	transform:translate(2px, -10px);
+}
+
+.botMenuList1>.sapMBtn .sapMBtnInner, .botMenuList1>.sapMBtn .sapMBtnContent { 
+	    text-align: left !important;
+}
+
+.botListSUg {
+	 border-bottom-left-radius: 10px !important;
+     border-bottom-right-radius: 10px !important;
+	 background-color:  white !important;
+	 Margin-bottom : 5px !important;
+	 margin-left: 5px !important;
+}
+.hListRate{
+	    display: inline-block;
+}
+.botRateBut {
+	    margin-left : 5px;
+}
+.busyIndicator{
+ background-color: white;
+}
+.imagemar {
+	margin-left : 5px;
+}
+.indictopmar{
+	margin-top : 5px;
+}
+.botTableSM .sapMListTbl .sapMText, .botTableSM .sapMListTbl .sapMLabel { font-size: 12px;
+	font-family: inherit;
+}
+.msgLinkFS .sapMLnk {font-size: 12px;}

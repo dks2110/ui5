@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<!--	<Dialog id="picDialog" showHeader="false" >
+		<content>
+	<FlexBox fitContainer="true" width="600px">
+		<Image id="zoomImageId" width="100%"></Image>
+	</FlexBox>
+	</content>
+		<beginButton>
+			<Button text="Close" press="onPressClosePic"/>
+		</beginButton>
+	</Dialog>-->
+	<ResponsivePopover id="picDialog" class="sapUiContentPadding"   placement="Left" initialFocus="onCloseImg"  contentWidth="60%">
+	
+		<beginButton>
+				<Button id="onCloseImg" text="Close" press="onPressClosePic"/>
+		</beginButton>
+		<!--<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				
+				<Button id="onCloseImg" text="Close" press="onPressClosePic"/>
+			</Toolbar>
+		</footer>-->
+		<content>
+		<FlexBox fitContainer="true" >
+			<Image id="zoomImageId" width="100%"></Image>
+		</FlexBox>
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

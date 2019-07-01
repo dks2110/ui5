@@ -1,0 +1,12 @@
+<mvc:View controllerName="chat.bot.controller.bot" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true"
+	xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<mvc:XMLView viewName="chat.bot.bot.view.bot"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
